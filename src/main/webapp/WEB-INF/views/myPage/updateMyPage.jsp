@@ -30,103 +30,150 @@
 	<%@ include file="/WEB-INF/views/include/sideBar.jsp"%>
 	
 	<div>
-		<h1>회원정보수정</h1>
+		<h3>회원정보수정</h3>
 	<form action="/myPage/updateMyPage" method="post"
 		id="updateMyPage_form">
-
-		<div class="id_wrap">
-			<div class="id_name">아이디 : ${member.id}</div>
-			<input type="hidden" class="id" name="id" value="${member.id}">
-		</div>
-		<div class="name_wrap">
-			<div class="name_name">이름 : ${member.name}</div>
-		</div>
-		<div class="tel_wrap">
-			<div class="tel_name">
-				연락처 : <input class="tel_input" name="tel" value="${member.tel}">
-			</div>
-			<span class="final_tel_check">연락처를 입력해주세요.</span>
-		</div>
-		<div class="email_wrap">
-			<div class="email_name">
-				이메일 : <input class="email_input" name="email"
-					value="${member.email}">
-			</div>
-			<span class="final_email_check">이메일을 입력해주세요.</span>
-		</div>
-
-		<div class="change_pw_wrap">
-			<div class="change_pw_name">
-				비밀번호 변경
-				<div class="current_pw_input_box">
-					현재 비밀번호 : <input class="current_pw_input" name="current_pw">
-				</div>
-				<span class="current_pwck_input_re_1">현재 비밀번호가 일치합니다.</span> <span
-					class="current_pwck_input_re_2">현재 비밀번호가 일치하지 않습니다.</span>
-
-				<div class="new_pw_input_box">
-					새로운 비밀번호 : <input class="new_pw_input" name="pw">
-				</div>
-				<!-- 
-				<span class="new_pw_input_re_1">새로운 비밀번호가 일치합니다.</span> <span
-					class="new_pw_input_re_2">새로운 비밀번호가 일치하지 않습니다.</span>
-					 -->
-				<div class="new_pwck_input_box">
-					새로운 비밀번호 확인: <input class="new_pwck_input">
-				</div>
-				<span class="new_pwck_input_re_1">새로운 비밀번호 확인이 일치합니다.</span> <span
+		
+		<table>
+		<tr style="font-size: 25px; font-weight: bold;">
+		<th>아이디</th>
+		<td>${member.id}</td>
+		</tr>
+		
+		<tr style="font-size: 25px; font-weight: bold;">
+		<th>이름</th>
+		<td>${member.name}</td>
+		</tr>
+		
+		
+		<tr>
+		<th>연락처</th>
+		<td><input class="tel_input" name="tel" value="${member.tel}"></td>
+		</tr>
+		
+		<tr>
+		<th></th>
+		<td class="final_tel_check">연락처를 입력해주세요.</td>
+		</tr>
+		
+		<tr>
+		<th>이메일</th>
+		<td><input class="email_input" name="email" value="${member.email}"></td>
+		</tr>
+		
+		<tr>
+		<th></th>
+		<td class="final_email_check">이메일을 입력해주세요.</td>
+		</tr>
+		
+		</table>
+		
+		<span class="change_pw_name">비밀번호 변경</span>
+		
+		<table>
+		<tr class="current_pw_input_box">
+		<th>현재 비밀번호</th>
+		<td><input class="current_pw_input" name="current_pw"></td>
+		</tr>
+				
+		<tr class="current_pw_input_box">
+		<th></th>
+		<td><span class="current_pwck_input_re_1">현재 비밀번호가 일치합니다.</span> <span
+					class="current_pwck_input_re_2">현재 비밀번호가 일치하지 않습니다.</span></td>
+		</tr>
+		
+		<tr>
+		<th>새 비밀번호</th>
+		<td><input class="new_pw_input" name="pw"></td>
+		</tr>
+		
+		<tr>
+		<th>새 비밀번호 확인</th>
+		<td><input class="new_pw_input" name="pw"></td>
+		</tr>
+		
+		<tr>
+		<th></th>
+		<td><span class="new_pwck_input_re_1">새로운 비밀번호 확인이 일치합니다.</span> <span
 					class="new_pwck_input_re_2">새로운 비밀번호가 확인이 일치하지 않습니다.</span>
 					<span class="new_pwck_input_re_3">새로운 비밀번호 확인이 일치합니다.</span>
-
-
-				<div class="pw_change_btn_wrap">
+		</td>
+		</tr>
+		
+		<tr>
+		<th></th>
+		<td><div class="pw_change_btn_wrap">
 					<input type="button" class="pw_change_btn" value="비밀번호 변경">
 				</div>
-			</div>
-		</div>
-
-		<div class="birth_wrap">
-			<div class="birth_name">
-				생년월일 : <input name="birth" autocomplete="off" readonly="readonly"
+		</td>
+		</tr>
+		<tr>
+		<th>생년월일</th>
+		<td><input name="birth" autocomplete="off" readonly="readonly"
 					value=<fmt:formatDate pattern="yyyy/MM/dd" value="${member.birth}"/>>
-			</div>
-		</div>
-
-		<div class="address_wrap">
-			<div class="address_name">주소</div>
-			<div class="post_input_wrap">
-				<div class="post_input_box">
-					<input class="post_input" name="post" value="${member.post}"
+			</td>
+		
+		</table>
+		
+		<table>
+		<span class="address_name">주소</span>
+		<div class="clearfix"></div>
+		
+		<tr>
+		<th></th>
+		<td>
+		<input class="post_input" name="post" value="${member.post}" readonly="readonly">
+		</td>
+		</tr>
+		
+		<tr>
+		<th></th>
+		<td>
+		<div class="address_btn" onclick="execution_daum_address()">			
+				주소 찾기</div>
+		</td>
+		</tr>
+		
+		<tr>
+		<th></th>
+		<td  class="addr1_input_box">
+		<input class="addr1_input" name="addr1" value="${member.addr1}"
 						readonly="readonly">
 				</div>
-				<div class="address_btn" onclick="execution_daum_address()">
-					<span>주소 찾기</span>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="addr1_input_wrap">
-				<div class="addr1_input_box">
-					<input class="addr1_input" name="addr1" value="${member.addr1}"
-						readonly="readonly">
-				</div>
-			</div>
-			<div class="addr2_input_wrap">
-				<div class="addr2_input_box">
+		</td>
+		</tr>
+		
+		<tr>
+		<th></th>
+		<td  class="addr2_input_box">
+		<div class="addr2_input_box">
 					<input class="addr2_input" name="addr2" value="${member.addr2}"
 						readonly="readonly">
 				</div>
-				<span class="final_addr_check">상세주소를 입력해주세요.</span>
-			</div>
-		</div>
+		</td>
+		</tr>
+		
+			<tr>
+		<th></th>
+		<td>
+		<span class="final_addr_check">상세주소를 입력해주세요.</span>
+		</td>
+		</tr>
+		
+		</table>
+	
 
+	<div class="btn_wrap">
 		<div class="confirm_btn_wrap">
 			<input type="button" class="confirm_btn" value="확인">
 		</div>
 		<div class="cancel_btn_wrap">
 			<input type="button" class="cancel_btn" value="취소">
 		</div>
+		
 		<div class="secession_btn_wrap">
 			<input type="button" class="secession_btn" value="회원 탈퇴">
+		</div>
 		</div>
 		<!-- 
 	<input type="hidden" name = "id" value ="${member.id}">
