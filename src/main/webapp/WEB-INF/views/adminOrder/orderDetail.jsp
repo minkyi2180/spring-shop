@@ -72,7 +72,7 @@
 			
 		</table>
 		
-		<input type="button" id="list_btn" value="목록으로 돌아가기"></td>
+	
 		
 		<form id="infoForm" method="get" action="/adminOrder/orderList">
 			<input type="hidden" id="orderNum" name="orderNum" value='<c:out value = "${olist.orderNum}"/>'>
@@ -80,6 +80,7 @@
 			<input type="hidden" id="keyword" name="keyword" value='<c:out value = "${cri.keyword}"/>'>
 		</form>
 	</div>
+	<input type="button" id="list_btn" value="목록으로 돌아가기"></td>
 	
 	<!-- footer -->
 	<%@include file="../include/adminFooter.jsp" %>
