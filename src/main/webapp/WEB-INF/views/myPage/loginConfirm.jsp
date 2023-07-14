@@ -22,7 +22,7 @@
 	<!-- 사이드 바 -->
 	<%@ include file="/WEB-INF/views/include/sideBar.jsp"%>
 	
-	<div>
+	<div class="myinfo">
 		<h3>회원 정보 확인</h3>
 		<form id="re_login_form" method="post">
 			아이디 : ${member.id}
