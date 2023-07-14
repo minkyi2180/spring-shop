@@ -15,7 +15,8 @@
 }
 
 img{
-	width: 50%;
+	
+	width: 20%;
 }
 
 table{
@@ -36,7 +37,7 @@ td{
 
 /* button */
 .btn_wrap{
-	margin-top:40px;
+	margin-top:20px;
 	
 }
 #list_btn{
