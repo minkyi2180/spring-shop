@@ -12,3 +12,24 @@
 	text-align: center;
 	overflow: hidden;
 }
+.myinfo{
+	float: right;
+	width: 90%;
+	text-align: left;
+}
+/* 메인 */
+#re_login_form{
+	border: 1px solid gray;
+	padding: 20px;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+/* 버튼 */
+.re_login_btn{
+	width: 150px;
+	color: white;
+	background-color: black;
+	margin-top: 30px;
+	
+}
