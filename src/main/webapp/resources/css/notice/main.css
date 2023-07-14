@@ -12,9 +12,15 @@
 	text-align: center;
 	overflow: hidden;
 }
+.table_wrap{
+	float: right;
+	width: 90%;
+	
+}
 /* 검색창 */
 .search_wrap{
 	margin-top: 100px;
+	float: right;
 }
 /* table 표 */
 table th{
