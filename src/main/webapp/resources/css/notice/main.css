@@ -20,7 +20,7 @@
 /* 검색창 */
 .search_wrap{
 	margin-top: 100px;
-	float: right;
+	float: center;
 }
 /* table 표 */
 table th{
