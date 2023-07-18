@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+/*관리자 페이지 컨텐츠 영역*/
+.admin_content_wrap {
+	margin: 0 auto;
+	width: 90%;
+	height: 90%;	
+	margin-top: 30px;
+	position: relative;
+}
+
+img{
+	
+	width: 20%;
+}
+
+table{
+	width: 70%;
+	
+	
+}
+th{
+	width:30%;
+	border: 1px solid silver;
+	padding-left: 15px;
+}
+td{
+	width: 100%;
+	border: 1px solid silver;
+	padding: 15px;
+}
+
+/* button */
+.btn_wrap{
+	margin-top:20px;
+	
+}
+#list_btn{
+	border: 1px solid gray;
+	padding: 10px;
+}
+
+#update_btn{
+	border: 1px solid gray;
+	width: 100px;
+	padding: 10px;
+	margin-left: 10px;
+}
