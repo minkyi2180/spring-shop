@@ -51,7 +51,8 @@
 	                  		<c:forEach items="${list}" var="list">
 	                  		<tr>
 	                  			<td><c:out value="${list.orderNum}"></c:out> </td>
-	                  			<td><img src="/resources/image_1/s_${list.mainImg }">${list.mainProd }</td>
+	                  			<td><img src="/resources/image_1/s_${list.mainImg }">${list.mainProd }
+	                  			</td>
 	                  			<td><fmt:formatDate value="${list.orderDate}" pattern="yyyy.MM.dd"/></td>
 	                  			<td><c:out value="${list.orderStatus}"/></td>
 	                  			<td>

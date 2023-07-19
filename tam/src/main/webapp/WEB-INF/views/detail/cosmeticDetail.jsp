@@ -31,7 +31,12 @@
 				<!-- 오른쪽 -->
 				<div class="div_right">	
 					<!-- 정보 -->
-					<div></div>
+		<div>
+		<h4><c:out value="${prodDetail.prodName}"/></h4>
+		<h5><c:out value="${prodDetail.price}" /> won </h5>
+		
+		</div>
+		
 					<!-- 버튼 -->
 					<div class="button">						
 						<div class="button_quantity">
